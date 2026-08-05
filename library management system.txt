@@ -1,0 +1,34 @@
+n = int(input("Enter the number of books: "))
+
+borrow = []
+
+print("Enter borrow count for each book:")
+for i in range(n):
+    count = int(input())
+    borrow.append(count)
+
+
+average = sum(borrow) / n
+print("\nAverage borrow count =", average)
+
+
+highest = max(borrow)
+lowest = min(borrow)
+print("Highest borrow count =", highest)
+print("Lowest borrow count =", lowest)
+
+
+zero_count = borrow.count(0)   
+print("Books not borrowed =", zero_count)
+
+
+mode = borrow[0]
+max_frequency = 0
+
+for i in borrow:
+    frequency = borrow.count(i)
+    if frequency > max_frequency:
+        max_frequency = frequency
+        mode = i
+
+print("Most frequent borrow count (Mode) =", mode)
