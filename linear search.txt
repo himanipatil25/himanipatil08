@@ -1,0 +1,16 @@
+n = int(input("Enter number of accounts: "))
+accounts = []
+print("Enter account IDs:")
+for i in range(n):
+    accounts.append(int(input())) 
+    key = int(input("Enter ID to search: "))
+found = -1
+for i in range(n):
+    if accounts[i] == key:
+        found = i
+        break
+
+if found != -1:
+    print(f"ID {key} found at position {found}")
+else:
+    print(f"ID {key} not found")
